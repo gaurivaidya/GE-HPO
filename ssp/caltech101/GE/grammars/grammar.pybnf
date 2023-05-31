@@ -1,0 +1,16 @@
+<model_hyp> ::= <optimiser> <lr> <momentum> <batch_size> 
+
+#learning hyperparameters
+<optimiser> ::= 'Adam' | 'SGD' | 'RMSprop' | 'Adamax' | 'Adadelta' | 'Adagrad'
+
+<lr> ::= 0.0<dec_0_9><dec_0_9><dec_1_9> | 0.0<dec_0_9><dec_0_9> | 0.0<dec_0_9> | 0.1
+<dec_0_9> ::= GE_RANGE:9
+<dec_1_9> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 
+ 
+<momentum> ::= 0.<dec_mom><dec1>
+<dec1> ::= GE_RANGE:10 | <dec1><dec1>
+<dec_mom> ::= 6 | 7 | 8 | 9
+
+<batch_size> ::= 16 | 32 | 64 | 128
+
+

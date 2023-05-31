@@ -1,0 +1,20 @@
+CACHE:                  False
+CODON_SIZE:             512
+CROSSOVER:              variable_onepoint
+CROSSOVER_PROBABILITY:  0.95 exploitation
+DEBUG:                  False
+GENERATIONS:            10
+MAX_GENOME_LENGTH:      200
+GRAMMAR_FILE:           grammar.pybnf
+INITIALISATION:         PI_grow
+INVALID_SELECTION:      False
+MAX_INIT_TREE_DEPTH:    20
+MAX_TREE_DEPTH:         40
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01 exploration
+POPULATION_SIZE:        10
+FITNESS_FUNCTION:       hyperge_2
+REPLACEMENT:            generational
+SELECTION:              tournament
+VERBOSE:                True
+MUTATE_DUPLICATES:	True

@@ -1,0 +1,22 @@
+#main model (LeNet-1) 
+<lenet> ::= <filters1> <kernel_size> <padding> <strides> <activation> 
+<filters2> <kernel_size> <padding> <strides> <layers> <optimiser> <layers>
+
+#network hyperparameters
+<filters1> ::= 16 | 24 | 32 | 40 | 48 | 52 | 64
+<filters2> ::= 16 | 24 | 32 | 40 | 48 | 52 | 64
+<kernel_size> ::= 3 | 4 | 5
+<strides> ::= 1 | 2 | 3 | 4 
+<padding> ::= """same""" | """valid"""
+<activation> ::= """elu""" | """relu""" | """selu""" | """sigmoid""" | """tanh"""
+<layers> ::= 32 | 64 | 96 | 128 | 160 | 192 | 224 |  256 | 288 | 320 | 352 | 384 | 416 | 448 | 480 | 512
+
+
+#learning hyperparameters
+<optimiser> ::= Adam(learning_rate=float(<lr>)) | SGD(lr=float(<lr>),momentum=float(<momentum>)) | RMSprop(lr=float(<lr>),momentum=float(<momentum>)) | Adamax(lr=<lr>)
+<lr> ::= 0.00001 | 0.0001 | 0.001 | 0.01 | 0.1
+<momentum> ::= 0.<dec_mom><dec1>
+<dec1> ::= GE_RANGE:10 | <dec1><dec1>
+<dec_mom> ::= 6 | 7 | 8 | 9
+
+
